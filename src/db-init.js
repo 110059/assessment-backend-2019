@@ -1,15 +1,15 @@
-const { User } = require('./models')
+const { UserModel } = require('./models')
 
 async function seedUsers() {
-  await User.deleteMany({});
+  await UserModel.deleteMany({});
 
-  const user1 = new User({
+  const user1 = new UserModel({
     name: 'John Doe',
     email: 'john.doe@example.com',
     role: 'Engineer'
   });
 
-  const user2 = new User({
+  const user2 = new UserModel({
     name: 'Jane Doe',
     email: 'jane.doe@example.com',
     role: 'Supervisor'

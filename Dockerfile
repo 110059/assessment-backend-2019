@@ -1,1 +1,13 @@
-# TODO: This file must be populated so reviewer could easily run your app
+FROM node:carbon
+
+WORKDIR /usr/src/app
+
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+CMD [ "npm", "start" ]

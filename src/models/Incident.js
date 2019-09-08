@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const IncidentSchema = new mongoose.Schema({
-  title:     {
+  title: {
     type: String,
     required: true
   },
@@ -18,6 +18,6 @@ const IncidentSchema = new mongoose.Schema({
   }
 }, { timestamps: true })
 
-const Incident = mongoose.model('Incident', IncidentSchema)
+const IncidentModel = mongoose.model('Incident', IncidentSchema)
 
-module.exports = Incident
+module.exports = IncidentModel
